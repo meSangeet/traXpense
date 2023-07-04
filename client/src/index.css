@@ -11,3 +11,10 @@
 .navbar{
   background-color: rgb(55, 55, 63) !important;
 }
+
+.register-page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
