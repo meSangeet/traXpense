@@ -1,0 +1,8 @@
+concurrently -> it is a node module when we have to run two ports together. here in this case both node and react use their own individual port.
+
+axios -> 
+The axios module is a popular HTTP client for making HTTP requests from a Node.js environment. It simplifies the process of making HTTP requests by providing a straightforward and intuitive API.
+
+react-router-dom -> The react-router-dom module is a popular library that provides routing capabilities for React applications. It allows you to handle client-side routing in your React application, enabling navigation between different views or components based on the current URL.
+
+react-redux -> the react-redux module is a popular library that provides integration between React and Redux, two commonly used libraries in the JavaScript ecosystem. It allows you to manage the state of your React application using Redux, a predictable state management container.

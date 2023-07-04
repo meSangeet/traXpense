@@ -1,0 +1,65 @@
+user route 
+
+const express = require('express'): Imports the Express framework, which is a popular framework for building web applications in Node.js.
+
+const { loginController, registerController } = require('../controllers/userController'): Imports the loginController and registerController functions from a file located at '../controllers/userController'. These functions are expected to handle the logic for user login and registration operations.
+
+const router = express.router(): Creates a router object using the express.router() method. This router object allows you to define routes for specific endpoints.
+
+router.post('/login', loginController): Defines a route for the /login endpoint with the HTTP method POST. When a request is made to this endpoint, the loginController function will be executed to handle the request. This function is responsible for implementing the login logic.
+
+router.post('/register', registerController): Defines a route for the /register endpoint with the HTTP method POST. When a request is made to this endpoint, the registerController function will be executed to handle the request. This function is responsible for implementing the user registration logic.
+
+module.export = router: Exports the router object to make it available for other parts of the application.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+user and register controller ---
+
+
+
+The provided code defines two controller functions, loginController and registerController, that handle the logic for user login and registration operations within a Node.js application. It also imports the userModel from a file located at '../models/userModel'.
+
+Here's a breakdown of the code:
+
+const userModel = require('../models/userModel'): Imports the userModel from a file located at '../models/userModel'. This model represents the schema and provides methods for interacting with the user data in the database.
+
+const loginController = async (req, res) => { ... }: Defines the loginController function. This function is an asynchronous function that takes in two parameters: req (request) and res (response). It handles the logic for user login.
+
+Inside the function:
+
+const { email, password } = req.body: Destructures the email and password properties from the request body. These properties are expected to be sent in the request payload when making a login request.
+
+const user = await userModel.findOne({ email, password }): Uses the userModel to find a user in the database whose email and password match the provided values. The findOne() method searches for a single document that matches the specified conditions.
+
+if (!user) return res.status(400).send('user not found'): Checks if a user was found. If no matching user is found, it sends a response with a status of 400 (Bad Request) and a message indicating that the user was not found.
+
+res.status(200).json({ success: true, user }): If a user is found, it sends a response with a status of 200 (OK) and a JSON object containing a success status and the user object.
+
+const registerController = async (req, res) => { ... }: Defines the registerController function. This function is an asynchronous function that takes in two parameters: req (request) and res (response). It handles the logic for user registration.
+
+Inside the function:
+
+const newUser = new userModel(req.body): Creates a new instance of the userModel with the data from the request body. This assumes that the request body contains the necessary properties to create a new user.
+
+await newUser.save(): Saves the newly created user to the database using the save() method provided by the userModel.
+
+res.status(201).json({ success: true, newUser }): Sends a response with a status of 201 (Created) and a JSON object containing a success status and the newly created user object.
+
+module.exports = { loginController, registerController }: Exports the loginController and registerController functions, making them available to be imported and used in other parts of the application.
+
+In summary, the code defines controller functions for handling user login and registration. The loginController function searches for a user with the provided email and password and returns the user if found, while the registerController function creates and saves a new user to the database.

@@ -39,3 +39,12 @@ Controlled Deployment: With the .env file, you can customize configuration value
 Easy Configuration Updates: The .env file provides a convenient way to update configuration values without modifying the codebase. This flexibility allows you to change sensitive information, such as passwords or keys, without redeploying the entire application. It simplifies the process of rotating credentials or updating configurations in response to security vulnerabilities or policy changes.
 
 While the .env file itself does not provide complete security, it plays a crucial role in securing the application by isolating sensitive information, restricting access, and enabling controlled deployment and configuration updates. It is important, however, to follow best practices in managing and securing the .env file itself, such as properly protecting file access and encryption keys and regularly reviewing and auditing its contents for any sensitive information.
+
+
+const app = express(): This line creates an instance of the Express application. It initializes the server object that will handle HTTP requests and responses.
+
+app.use(morgan('dev')): This line registers the Morgan middleware with the Express application. It configures Morgan to use the 'dev' format, which provides concise and colorful output for logging requests.
+
+app.use(express.json()): This line registers the built-in Express middleware for parsing JSON. It allows the server to handle JSON-encoded data sent in the request body.
+
+app.use(cors()): This line registers the CORS middleware with the Express application. It enables Cross-Origin Resource Sharing and allows requests from any origin.

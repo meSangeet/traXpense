@@ -9,13 +9,7 @@ middleware refers to functions or components that sit between the initial proces
 delivery of the corresponding HTTP response. Middleware functions are responsible for processing and modifying the request
 request and response objects, as well as controlling the flow of the applications.
 
-const app = express(): This line creates an instance of the Express application. It initializes the server object that will handle HTTP requests and responses.
 
-app.use(morgan('dev')): This line registers the Morgan middleware with the Express application. It configures Morgan to use the 'dev' format, which provides concise and colorful output for logging requests.
-
-app.use(express.json()): This line registers the built-in Express middleware for parsing JSON. It allows the server to handle JSON-encoded data sent in the request body.
-
-app.use(cors()): This line registers the CORS middleware with the Express application. It enables Cross-Origin Resource Sharing and allows requests from any origin.
 
 
 We are building our application on the MVC pattern.
@@ -45,4 +39,31 @@ It contains the application's logic for processing requests, making decisions, a
 The MVC pattern promotes separation of concerns and modularity in application design. It allows for easier maintenance, testing, and scalability by keeping different aspects of the application separate. Changes in one component can be made without affecting the others, as long as the defined interfaces between the components are maintained.
 
 In a web application context, the MVC pattern is often used with frameworks like Ruby on Rails, Django, or Laravel, where the framework provides the underlying structure and conventions to implement the MVC architecture. However, the MVC pattern can be applied to various types of applications, not just web applications.
+
+
+What is HTTP
+
+
+HTTP stands for Hypertext Transfer Protocol. It is an application layer protocol used for communication between web browsers and web servers. HTTP allows the transfer of various types of data, such as HTML documents, images, videos, and more, over the internet.
+
+HTTP follows a client-server model, where the client (typically a web browser) sends requests to the server, and the server responds with the requested data or an appropriate status code indicating the outcome of the request.
+
+
+What is routing and router ?
+
+
+Routing refers to the process of determining how an application responds to a client request for a specific URL or endpoint. In web development, routing is commonly used to map URLs to different views or components in order to display the appropriate content to the user.
+
+A router is a component or module that handles the routing functionality within an application. It is responsible for matching the current URL with predefined routes and rendering the corresponding view or component.
+
+
+What is a PORT?
+
+ a port is a communication endpoint that is associated with a specific process or service on a computer. It allows multiple applications or services to run on the same device and communicate with other devices over a network.
+
+
+ What is Redux ?
+
+ 
+Redux is a state management library for JavaScript applications, commonly used in web development. It provides a predictable state container that helps manage and centralize the state of an application, making it easier to reason about and maintain complex application state.
 
