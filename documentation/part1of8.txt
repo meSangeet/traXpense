@@ -1,0 +1,22 @@
+------------------------node modules installed -----------------------------
+
+1. colors -> The colors module is used to style and color the NodeJS console.
+
+2. dotenv -> This module is used to handle environment variables. It allows developers to store configuration information
+            in a .env file and load those variables into the application's environment during runtime.
+
+3. cors -> CORS stands for Cross-Origin Resource Sharing, and it allows a server to specify who can access its resources. It helps in handling cross-origin requests in a secure manner.
+
+4. morgan -> this module is a middleware used for HTTP request logging in web applications. It provides a concise and 
+            customizable way to log HTTP requests and responses, helping developers undersand and debug the behaviour
+            of their application.
+
+
+.role of .env file --> 
+
+The .env file, short for "environment file," is a configuration file commonly used in software development. Its primary role is to store environment-specific configuration variables, such as API keys, database connection strings, or other sensitive information.
+
+The code dotenv.config(); is typically used in Node.js applications with the dotenv library to load and parse the values from a .env file into environment variables.
+
+
+const PORT = 8080 || process.env.PORT: This line assigns the value of 8080 to the PORT constant if process.env.PORT is not defined or evaluates to a falsy value. Otherwise, it assigns the value of process.env.PORT to the PORT constant. This allows flexibility in specifying the port number either through a hardcoded value (8080 in this case) or through an environment variable.
