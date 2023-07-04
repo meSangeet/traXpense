@@ -3,3 +3,11 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+.content{
+  height: 80vh;
+}
+
+.navbar{
+  background-color: rgb(55, 55, 63) !important;
+}
